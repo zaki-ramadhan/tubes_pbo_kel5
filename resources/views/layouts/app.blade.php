@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>    
+
+    <link rel="icon" href="{{ asset('images/logo_fix.png') }}" type="image/png">
+    
 </head>
 <body class="bg-gray-100 text-gray-900">
     <div class="min-h-screen flex flex-col">
         <header class="bg-blue-600 text-white py-4 shadow-md">
             <div class="container mx-auto flex justify-between items-center px-4">
-                <h1 class="text-2xl font-semibold">My Application</h1>
+                <h1 class="text-2xl font-semibold">Katering Ibu</h1>
                 <nav>
                     @guest
                         @if (!Route::is('login'))
@@ -32,9 +36,9 @@
         <main class="flex-grow container mx-auto px-4 py-8">
             @yield('content')
         </main>
-        <footer class="bg-gray-800 text-white py-4 mt-auto">
+        <footer class="bg-gray-800 text-white py-3 mt-auto text-xs">
             <div class="container mx-auto px-4 text-center">
-                &copy; 2024 My Application. All rights reserved.
+                &copy; 2024 Katering Ibu. All rights reserved.
             </div>
         </footer>
     </div>

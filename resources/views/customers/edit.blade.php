@@ -28,7 +28,7 @@
                 <input type="password" class="form-control" id="password" name="password" placeholder="Leave blank to keep current password">
             </div>
             <div class="mb-3">
-                <label for="notelp" class="form-label">Phone Number</label>
+                <label for="notelp" class="form-label">Phone z</label>
                 <input type="text" class="form-control" id="notelp" name="notelp" value="{{ $customer->notelp }}" required>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>

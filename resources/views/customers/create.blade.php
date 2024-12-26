@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Add New Customer</h1>
+        <h1>Tambah Pelanggan Baru</h1>
         @if($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -30,7 +30,7 @@
                 <label for="notelp" class="form-label">Phone Number</label>
                 <input type="text" class="form-control" id="notelp" name="notelp" required>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
 @endsection

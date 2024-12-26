@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UlasanController;
+use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -16,3 +19,7 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware('auth')->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::resource('menus', MenuController::class);
+Route::resource('ulasans', UlasanController::class)->middleware('auth');
+Route::resource('pesanans', PesananController::class)->middleware('auth');
+
